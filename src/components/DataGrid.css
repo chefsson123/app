@@ -1,0 +1,26 @@
+table {
+  border: 1px solid black;
+  text-align: center;
+  background-color: rgb(80, 79, 79);
+  color: rgb(231, 231, 231);
+}
+
+th {
+  padding: 1rem;
+}
+
+td {
+  border-top: 1px solid black;
+  padding: 1rem;
+}
+
+.datagrid-container {
+  width: 100%;
+  height: 100vh;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 10;
+}
