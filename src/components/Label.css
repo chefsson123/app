@@ -1,0 +1,13 @@
+label {
+  margin-right: 3rem;
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 0.5em;
+  font-weight: 800;
+  transition: 0.5s;
+}
+
+label:hover {
+  background-color: #03ad9f;
+  border: 2px solid #000000;
+}

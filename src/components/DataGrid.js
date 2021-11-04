@@ -1,10 +1,8 @@
 import "./DataGrid.css";
 
 const DataGrid = (props) => {
- 
   return (
     <div className="datagrid-container">
-      
       <table>
         <tbody>
           <tr>
@@ -13,12 +11,25 @@ const DataGrid = (props) => {
             <th>Project ID</th>
             <th>Days worked</th>
           </tr>
-          <tr>
-            <td>{props.employeeStats[0].employeeOne}</td>
-            <td>{props.employeeStats[0].employeeTwo}</td>
-            <td>{props.employeeStats[0].projectID}</td>
-            <td>{props.employeeStats[0].daysWorkedTogether}</td>
-          </tr>
+          {props.data.map((data, index) => {
+            return (
+              <tr key={`${index}`}>
+                <td>#{data.empOne}</td>
+                <td>#{data.empTwo}</td>
+
+                <td>
+                  {data.details.map((project, index) => {
+                    return (
+                      <li key={`${index}`}>
+                        #{project.proj} - {project.days} days
+                      </li>
+                    );
+                  })}
+                </td>
+                <td>{data.daysWorkedTogether}</td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>

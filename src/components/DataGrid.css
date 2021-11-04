@@ -24,3 +24,7 @@ td {
   position: absolute;
   z-index: 10;
 }
+
+li {
+  list-style-type: none;
+}
